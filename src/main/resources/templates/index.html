@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8" />
+<title>Gov Job Guru CMS</title>
+<link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="react-datepicker.css" />
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"> <img height="30px"
+					src="govjobguru.png" />
+				</a>
+				<h3 class="navbar-text">
+					<span th:inline="text"> <b> Hello
+							[[${#httpServletRequest.remoteUser}]]!</b></span> - Welcome to Govermnet Job
+					Guru Content Manage System
+				</h3>
+				<form th:action="@{/logout}" method="post"
+					class="navbar-form navbar-right">
+					<input type="submit" class="btn btn-default" value="Sign Out" />
+				</form>
+			</div>
+		</div>
+	</nav>
+	<div id="app"></div>
+	<script src="bundle.js"></script>
+</body>
+</html>
