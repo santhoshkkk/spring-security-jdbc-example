@@ -33,3 +33,4 @@ README.html
 
 *.log
 data/
+/.apt_generated/
